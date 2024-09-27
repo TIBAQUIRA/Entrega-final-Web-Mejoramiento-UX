@@ -1,0 +1,33 @@
+body {
+  background-color: #111111;
+  color: azure;
+}
+
+md-outlined-button {
+  --md-outlined-button-container-color: white; 
+  --md-outlined-button-label-text-color: white;
+}
+
+md-outlined-text-field {
+  --md-outlined-text-field-container-color: white;
+  --md-outlined-text-field-label-color: white;
+  --md-outlined-text-field-input-text-color: white;
+  --md-outlined-text-field-outline-color: white;
+  --md-sys-color-on-surface-variant: white;
+  --md-outlined-field-label-text-color: white;
+}
+
+md-outlined-select {
+  --md-outlined-field-content-color: white;
+  --md-sys-color-on-surface: white;
+  --md-outlined-select-container-color: white;
+  --md-outlined-select-label-color: white;
+  --md-outlined-select-input-text-color: white;
+  --md-outlined-select-outline-color: white;
+  --md-outlined-field-label-text-color: white;
+}
+
+md-select-option {
+  --md-select-option-text-color: white;
+}
+

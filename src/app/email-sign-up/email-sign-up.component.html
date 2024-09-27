@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row" style="height: 100%;">
+        <div class="col-md-6 offset-3 login-form">
+            <div class="row">
+                <div class="form">
+                    <div class="login-image-group">
+                        <img id="logo" src="logo.PNG" alt="Logo">
+                    </div>
+                    <div class="email-from-group">
+                        <md-outlined-text-field 
+                            class="form-input" 
+                            label="Email" 
+                            placeholder="Email" 
+                            type="text"
+                            [ngModule]="userData.email"
+                            (input)="update($event)">
+                        </md-outlined-text-field>
+                    </div>
+                    <div class="password-from-group">
+                        <md-outlined-text-field 
+                            class="form-input" 
+                            label="Contraseña" 
+                            placeholder="Contraseña" 
+                            type="text"
+                            [ngModule]="userData.email"
+                            (input)="update($event)">
+                        </md-outlined-text-field>
+                    </div>
+                    <div class="button-from-group">
+                        <md-outlined-button id="cancel-button" (click)="logIn()"> Ingresar
+                        </md-outlined-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
