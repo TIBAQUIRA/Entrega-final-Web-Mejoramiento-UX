@@ -1,0 +1,15 @@
+.form-input{
+    margin: 5px 10px 15px 10px;
+    width: 100%;
+}
+
+.schedule_external_links {
+    margin-bottom: 15px;   
+}
+
+.form-buttons md-outlined-button{
+    width: 100%;
+    margin-top: 10px;
+    background-color: transparent;
+}
+

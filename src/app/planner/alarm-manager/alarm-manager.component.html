@@ -1,0 +1,152 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @if ( selectedAlarm != null && selectedAlarm >= 0){
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Nombre" 
+                    placeholder="Nombre" 
+                    type="text"
+                    [value]="alarmList[selectedAlarm].name"
+                    [ngModel]="alarmData.name"
+                    >
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Descripción" 
+                    placeholder="Descripción" 
+                    type="text"
+                    [value]="alarmList[selectedAlarm].description">
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Fecha" 
+                    placeholder="Fecha" 
+                    type="date"
+                    [value]="alarmList[selectedAlarm].date">
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Hora" 
+                    placeholder="Hora" 
+                    type="datetime-local"
+                    [value]="alarmList[selectedAlarm].hour">
+                </md-outlined-text-field>
+                <div class="row schedule_external_links">
+                    <div class="col-md-12">
+                        <h5>Añadir a</h5>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="jira-1.svg" width="50" height="50">
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="google_meet.svg" width="50" height="50">
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="github-logo.png" width="50" height="50">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <md-outlined-select class="form-input" label="Prioridad" [value]="alarmList[selectedAlarm].priorityLevel">
+                        <md-select-option selected value="1">
+                        <div slot="headline">High</div>
+                        </md-select-option>
+                        <md-select-option value="2">
+                        <div slot="headline">Medium</div>
+                        </md-select-option>
+                        <md-select-option value="3">
+                            <div slot="headline">Low</div>
+                        </md-select-option>
+                    </md-outlined-select>
+                </div>
+            }
+            @else {
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Nombre" 
+                    placeholder="Nombre" 
+                    type="text"
+                    [ngModel]="alarmData.name">
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Descripción" 
+                    placeholder="Descripción" 
+                    type="text"
+                    [ngModel]="alarmData.description">
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Fecha" 
+                    placeholder="Fecha" 
+                    type="date"
+                    [ngModel]="alarmData.date">
+                </md-outlined-text-field>
+                <md-outlined-text-field 
+                    class="form-input" 
+                    label="Hora" 
+                    placeholder="Hora" 
+                    type="datetime-local"
+                    [ngModel]="alarmData.hour">
+                </md-outlined-text-field>
+                <div class="row schedule_external_links">
+                    <div class="col-md-12">
+                        <h5>Añadir a</h5>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="jira-1.svg" width="50" height="50">
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="google_meet.svg" width="50" height="50">
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="github-logo.png" width="50" height="50">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <md-outlined-select class="form-input" label="Prioridad" [ngModel]="alarmData.priorityLevel">
+                        <md-select-option selected value="1">
+                        <div slot="headline">High</div>
+                        </md-select-option>
+                        <md-select-option value="2">
+                        <div slot="headline">Medium</div>
+                        </md-select-option>
+                        <md-select-option value="3">
+                            <div slot="headline">Low</div>
+                        </md-select-option>
+                    </md-outlined-select>
+                </div>
+            }
+            <div class="row form-buttons">
+                <div class="col-lg-12 col-xl-4">
+                    <md-outlined-button id="cancel-button" (click)="cancel($event)"> Cancelar
+                    </md-outlined-button>
+                </div>
+                <div class="col-lg-12 col-xl-4">
+                    <md-outlined-button id="delete-button"> Eliminar
+                    </md-outlined-button>
+                </div>
+                <div class="col-lg-12 col-xl-4">
+                    <md-outlined-button id="save-button" (click)="create($event)"> Guardar
+                    </md-outlined-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

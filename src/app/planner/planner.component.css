@@ -1,0 +1,72 @@
+:host {
+    position: fixed;
+    top: 150px;
+    width: 100%;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: calc( 100vh - 150px );
+}
+
+.container > .row {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.row > div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mic-button {
+    font-size: 125px;
+    padding: 10px;
+    height: 250px;
+    width: 250px;
+
+    div{
+        display: flex;
+        width: 175px;
+        height: 175px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.check-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 15px 30px 0 30px;
+    max-height: 300px;
+    overflow-y: auto;
+
+    > div:hover {
+        cursor: pointer;
+    }
+
+    .row{
+        text-align: left;
+        margin: 0;
+        padding: 5px 10px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    md-checkbox{
+        margin-left: auto;
+    }
+}
+
+#alarm-list > .row{
+    border-bottom: 1px solid;
+    min-height: 50px;
+}
